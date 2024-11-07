@@ -1,15 +1,9 @@
 import { ApiCall } from "tsrpc";
-import * as fs from 'fs/promises';
-import * as path from 'path';
-import { fromBase64, toHex, toUtf8 } from '@cosmjs/encoding';
+import { toUtf8 } from '@cosmjs/encoding';
 import {
 	getSignerClient,
 	generateAccount,
-	getSignerClientByWallet,
-	getContractClient,
 	getContractClientByWallet,
-	stringizing,
-	getCyferioStorageClientByWallet,
 	contractAddress,
 } from '../../../chain/config';
 import {
@@ -19,10 +13,7 @@ import {
 	SignerData,
 	StdFee,
 } from '@cosmjs/stargate';
-import { DirectSecp256k1HdWallet, OfflineSigner } from '@cosmjs/proto-signing';
-import { HdPath, stringToPath } from '@cosmjs/crypto';
-import { coins, makeCosmoshubPath } from '@cosmjs/amino';
-import { AuthInfo, TxBody, TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
+import { coins} from '@cosmjs/amino';
 
 import {
 	ExecuteInstruction,
@@ -30,9 +21,6 @@ import {
 	SigningCosmWasmClient,
 } from '@cosmjs/cosmwasm-stargate';
 import { MsgExecuteContract } from 'cosmjs-types/cosmwasm/wasm/v1/tx';
-import { bech32 } from 'bech32';
-import { t } from 'tar';
-import { CyferioStorageClient } from '../../../ts/CyferioStorage.client';
 import { ReqDaManager, ResDaManager } from "../../../shared/protocols/v1/Babylon/PtlDaManager";
 
 export const delay = (ms: number) =>
