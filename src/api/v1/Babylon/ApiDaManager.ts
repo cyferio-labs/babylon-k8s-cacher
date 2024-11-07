@@ -111,7 +111,7 @@ export default async function (call: ApiCall<ReqDaManager, ResDaManager>) {
 		console.log(res);
 		return call.succ({
 			time: new Date(),
-			digest: res,
+			babylon_digest: res,
 		});
 	} catch (error) {
         console.error("Error in ApiDaManager:", error);

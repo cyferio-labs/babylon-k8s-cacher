@@ -13,6 +13,6 @@ export interface ReqDaManager {
 
 export interface ResDaManager {
     /** 服务端内容创建时间 */
-    digest: string
+    babylon_digest: string
     time: Date
 }
