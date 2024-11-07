@@ -22,7 +22,7 @@ export const prefix = 'bbn';
 
 // export const signerAddress = 'bbn10gkn8s52lh9ywu6recy47m6j2laevug4zleg79';
 export const contractAddress =
-	'bbn1mm3m2lauvc88pcq33cdetwxf6uqsqgll3wq7w94ge0fah2mnmqxq02jd4s';
+	'bbn1lav6y4efkyvf92xuysu4cyxyx3rnmruka7c5p2t2gn5ua5nf097qncgmka';
 
 const defaultSigningClientOptions: SigningStargateClientOptions = {
 	broadcastPollIntervalMs: 8_000,
