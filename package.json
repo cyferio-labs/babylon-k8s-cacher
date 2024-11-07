@@ -13,7 +13,7 @@
     "sync": "tsrpc-cli sync",
     "api": "tsrpc-cli api",
     "docker:build": "docker build -t babylon-da .",
-    "docker:run": "docker run -p 3000:3000 babylon-da",
+    "docker:run": "docker run -p 3001:3001 babylon-da",
     "update:metadata": "ts-node scripts/updateMetadata.ts"
   },
   "devDependencies": {
