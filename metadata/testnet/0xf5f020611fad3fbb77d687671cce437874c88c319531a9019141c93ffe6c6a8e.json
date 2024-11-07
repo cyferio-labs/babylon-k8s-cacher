@@ -1,0 +1,508 @@
+{
+  "app_key": {
+    "fileFormatVersion": 6,
+    "address": "0xf5f020611fad3fbb77d687671cce437874c88c319531a9019141c93ffe6c6a8e",
+    "name": "app_key",
+    "friends": [
+      {
+        "address": "0xf5f020611fad3fbb77d687671cce437874c88c319531a9019141c93ffe6c6a8e",
+        "name": "walrus_da_schema"
+      }
+    ],
+    "structs": {
+      "AppKey": {
+        "abilities": {
+          "abilities": [
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "dummy_field",
+            "type": "Bool"
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "new": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xf5f020611fad3fbb77d687671cce437874c88c319531a9019141c93ffe6c6a8e",
+              "module": "app_key",
+              "name": "AppKey",
+              "typeArguments": []
+            }
+          }
+        ]
+      }
+    }
+  },
+  "deploy_hook": {
+    "fileFormatVersion": 6,
+    "address": "0xf5f020611fad3fbb77d687671cce437874c88c319531a9019141c93ffe6c6a8e",
+    "name": "deploy_hook",
+    "friends": [],
+    "structs": {},
+    "exposedFunctions": {
+      "run": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xf68ab6ceb5cfce6a73d76e5ef64f28d3cbe684413c80232871b31a9df0e09496",
+                "module": "world",
+                "name": "World",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xf68ab6ceb5cfce6a73d76e5ef64f28d3cbe684413c80232871b31a9df0e09496",
+                "module": "world",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      }
+    }
+  },
+  "entity_key": {
+    "fileFormatVersion": 6,
+    "address": "0xf5f020611fad3fbb77d687671cce437874c88c319531a9019141c93ffe6c6a8e",
+    "name": "entity_key",
+    "friends": [],
+    "structs": {},
+    "exposedFunctions": {
+      "from_address_with_seed": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          "Address",
+          {
+            "Vector": "U8"
+          }
+        ],
+        "return": [
+          "Address"
+        ]
+      },
+      "from_address_with_u256": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          "Address",
+          "U256"
+        ],
+        "return": [
+          "Address"
+        ]
+      },
+      "from_bytes": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Vector": "U8"
+          }
+        ],
+        "return": [
+          "Address"
+        ]
+      },
+      "from_object": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store",
+              "Key"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "TypeParameter": 0
+            }
+          }
+        ],
+        "return": [
+          "Address"
+        ]
+      },
+      "from_object_with_seed": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store",
+              "Key"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "TypeParameter": 0
+            }
+          },
+          {
+            "Vector": "U8"
+          }
+        ],
+        "return": [
+          "Address"
+        ]
+      },
+      "from_object_with_u256": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Store",
+              "Key"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "TypeParameter": 0
+            }
+          },
+          "U256"
+        ],
+        "return": [
+          "Address"
+        ]
+      },
+      "from_u256": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          "U256"
+        ],
+        "return": [
+          "Address"
+        ]
+      }
+    }
+  },
+  "init": {
+    "fileFormatVersion": 6,
+    "address": "0xf5f020611fad3fbb77d687671cce437874c88c319531a9019141c93ffe6c6a8e",
+    "name": "init",
+    "friends": [],
+    "structs": {},
+    "exposedFunctions": {}
+  },
+  "migrate": {
+    "fileFormatVersion": 6,
+    "address": "0xf5f020611fad3fbb77d687671cce437874c88c319531a9019141c93ffe6c6a8e",
+    "name": "migrate",
+    "friends": [],
+    "structs": {},
+    "exposedFunctions": {
+      "assert_version": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xf68ab6ceb5cfce6a73d76e5ef64f28d3cbe684413c80232871b31a9df0e09496",
+                "module": "world",
+                "name": "World",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "run": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xf68ab6ceb5cfce6a73d76e5ef64f28d3cbe684413c80232871b31a9df0e09496",
+                "module": "world",
+                "name": "World",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xf68ab6ceb5cfce6a73d76e5ef64f28d3cbe684413c80232871b31a9df0e09496",
+                "module": "world",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      }
+    }
+  },
+  "walrus_da_schema": {
+    "fileFormatVersion": 6,
+    "address": "0xf5f020611fad3fbb77d687671cce437874c88c319531a9019141c93ffe6c6a8e",
+    "name": "walrus_da_schema",
+    "friends": [
+      {
+        "address": "0xf5f020611fad3fbb77d687671cce437874c88c319531a9019141c93ffe6c6a8e",
+        "name": "walrus_da_system"
+      }
+    ],
+    "structs": {
+      "WalrusDaData": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop",
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "value",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "ascii",
+                "name": "String",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "contains": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xf68ab6ceb5cfce6a73d76e5ef64f28d3cbe684413c80232871b31a9df0e09496",
+                "module": "world",
+                "name": "World",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "get": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xf68ab6ceb5cfce6a73d76e5ef64f28d3cbe684413c80232871b31a9df0e09496",
+                "module": "world",
+                "name": "World",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "ascii",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "new": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "ascii",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xf5f020611fad3fbb77d687671cce437874c88c319531a9019141c93ffe6c6a8e",
+              "module": "walrus_da_schema",
+              "name": "WalrusDaData",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "register": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xf68ab6ceb5cfce6a73d76e5ef64f28d3cbe684413c80232871b31a9df0e09496",
+                "module": "world",
+                "name": "World",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xf68ab6ceb5cfce6a73d76e5ef64f28d3cbe684413c80232871b31a9df0e09496",
+                "module": "world",
+                "name": "AdminCap",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "remove": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xf68ab6ceb5cfce6a73d76e5ef64f28d3cbe684413c80232871b31a9df0e09496",
+                "module": "world",
+                "name": "World",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": []
+      },
+      "set": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xf68ab6ceb5cfce6a73d76e5ef64f28d3cbe684413c80232871b31a9df0e09496",
+                "module": "world",
+                "name": "World",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address",
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "ascii",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": []
+      }
+    }
+  },
+  "walrus_da_system": {
+    "fileFormatVersion": 6,
+    "address": "0xf5f020611fad3fbb77d687671cce437874c88c319531a9019141c93ffe6c6a8e",
+    "name": "walrus_da_system",
+    "friends": [],
+    "structs": {},
+    "exposedFunctions": {
+      "add_blob": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xf68ab6ceb5cfce6a73d76e5ef64f28d3cbe684413c80232871b31a9df0e09496",
+                "module": "world",
+                "name": "World",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "Struct": {
+              "address": "0x1",
+              "module": "ascii",
+              "name": "String",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": []
+      }
+    }
+  }
+}

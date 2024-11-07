@@ -1,0 +1,36 @@
+{
+  "name": "sui-da-.",
+  "version": "0.1.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "tsrpc-cli dev",
+    "start": "node dist/index.js",
+    "build": "tsrpc-cli build",
+    "doc": "tsrpc-cli doc",
+    "test": "mocha test/**/*.test.ts",
+    "proto": "tsrpc-cli proto",
+    "sync": "tsrpc-cli sync",
+    "api": "tsrpc-cli api",
+    "docker:build": "docker build -t sui-da .",
+    "docker:run": "docker run -p 3000:3000 sui-da",
+    "update:metadata": "ts-node scripts/updateMetadata.ts"
+  },
+  "devDependencies": {
+    "@types/mocha": "^8.2.3",
+    "@types/node": "^15.14.9",
+    "mocha": "^9.2.2",
+    "onchange": "^7.1.0",
+    "ts-node": "^10.9.2",
+    "tsrpc-cli": "^2.4.5",
+    "typescript": "5.5.4"
+  },
+  "dependencies": {
+    "@0xobelisk/sui-client": "^0.5.23",
+    "axios": "^1.7.7",
+    "cess-js-sdk-nodejs": "^0.2.6",
+    "dotenv": "^16.4.5",
+    "tsrpc": "^3.4.16",
+    "tsrpc-proto": "^1.4.3"
+  }
+}
