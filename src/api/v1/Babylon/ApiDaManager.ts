@@ -87,8 +87,12 @@ async function saveData(
 	// Replace execute call with this approach since there are issues with logs parsing in execute
 	// https://github.com/cosmos/cosmjs/blob/main/packages/cosmwasm-stargate/src/signingcosmwasmclient.ts#L532
 	// https://github.com/cosmos/cosmjs/blob/main/packages/stargate/src/logs.ts#L57-L68
-	const result = await client.signAndBroadcast(senderAddress, msgs, 'auto');
-
+	// const result = await client.signAndBroadcast(senderAddress, msgs, 'auto');
+	const result = await client.signAndBroadcastSync(
+		senderAddress,
+		msgs,
+		'auto'
+	);
 	return result;
 }
 
@@ -105,10 +109,9 @@ export default async function (call: ApiCall<ReqDaManager, ResDaManager>) {
 		let signerAddress = (await signer.getAccounts())[0].address;
 		let res = await saveData(client, signerAddress, blob, Number(da_height));
 		console.log(res);
-		console.log(res.transactionHash);
 		return call.succ({
 			time: new Date(),
-			digest: res.transactionHash,
+			digest: res,
 		});
 	} catch (error) {
         console.error("Error in ApiDaManager:", error);
