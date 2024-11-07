@@ -1,5 +1,5 @@
 {
-  "name": "sui-da-.",
+  "name": "babylon-da",
   "version": "0.1.0",
   "main": "index.js",
   "private": true,
@@ -12,8 +12,8 @@
     "proto": "tsrpc-cli proto",
     "sync": "tsrpc-cli sync",
     "api": "tsrpc-cli api",
-    "docker:build": "docker build -t sui-da .",
-    "docker:run": "docker run -p 3000:3000 sui-da",
+    "docker:build": "docker build -t babylon-da .",
+    "docker:run": "docker run -p 3000:3000 babylon-da",
     "update:metadata": "ts-node scripts/updateMetadata.ts"
   },
   "devDependencies": {

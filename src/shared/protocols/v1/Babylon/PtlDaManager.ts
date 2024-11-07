@@ -8,7 +8,7 @@
 export interface ReqDaManager {
     /** 要增加的消息内容 */
     da_height:string
-    digest:string
+    blob:string
 }
 
 export interface ResDaManager {

@@ -20,7 +20,7 @@ COPY . .
 RUN pnpm run build
 
 # 暴露端口（根据您的应用需要进行调整）
-EXPOSE 3000
+EXPOSE 3001
 
 # 启动应用
 CMD ["pnpm", "start"]
